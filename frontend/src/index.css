@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply font-sans text-slate-900 bg-bydGray;
+  overflow-x: hidden;
+}
+
+.container-xl {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Product thumbs swiper — pagination & bullets */
+.product-thumbs-swiper-wrap .product-thumb-pagination {
+  @apply flex justify-center items-center gap-2 flex-wrap;
+}
+.product-thumbs-swiper-wrap .product-thumb-bullet {
+  @apply w-2 h-2 rounded-full bg-slate-300 cursor-pointer transition-all duration-200;
+}
+.product-thumbs-swiper-wrap .product-thumb-bullet:hover {
+  @apply bg-slate-400;
+}
+.product-thumbs-swiper-wrap .product-thumb-bullet-active {
+  @apply bg-bydBlue w-6 rounded-full;
+}
+
+/* Hero banner swiper — pagination (on dark blue) */
+.hero-banner-pagination {
+  @apply flex justify-center items-center gap-2 flex-wrap;
+}
+.hero-banner-bullet {
+  @apply w-2.5 h-2.5 rounded-full bg-white/40 cursor-pointer transition-all duration-200;
+}
+.hero-banner-bullet:hover {
+  @apply bg-white/60;
+}
+.hero-banner-bullet-active {
+  @apply bg-white w-8 rounded-full;
+}
+
+/* WhatsApp floating button — pulse ring (tombol pakai Tailwind: fixed bottom-6 right-6) */
+.whatsapp-float-pulse {
+  @apply absolute inset-0 rounded-full bg-[#25D366];
+  animation: whatsapp-pulse 2s ease-out infinite;
+  opacity: 0.6;
+}
+.whatsapp-float .whatsapp-float-pulse + svg {
+  position: relative;
+  z-index: 1;
+}
+@keyframes whatsapp-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
