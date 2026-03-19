@@ -789,14 +789,14 @@ export default function HomePage() {
 
           {/* Kanan: background kota + mobil */}
           <div
-            className="absolute inset-0 bg-slate-300 bg-cover bg-center"
+            className="hidden lg:block absolute inset-0 bg-slate-300 bg-cover bg-center"
             style={{
               backgroundImage: `url(${bgTestDrive})`,
               clipPath: "polygon(85% 0, 100% 0, 100% 100%, 35% 100%)",
             }}
           />
           <div
-            className="absolute inset-0 flex items-end justify-end pr-4 md:pr-10"
+            className="hidden lg:flex absolute inset-0 items-end justify-end pr-4 md:pr-10"
             style={{
               clipPath: "polygon(85% 0, 100% 0, 100% 100%, 35% 100%)",
             }}
